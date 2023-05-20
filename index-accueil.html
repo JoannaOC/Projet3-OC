@@ -22,6 +22,9 @@
   </head>
 
   <body>
+    <!--Loader-->
+    <div class="loader"></div>
+
     <!--Part Header-->
 
     <header class="header">
@@ -56,23 +59,26 @@
         <div class="functioning__content-2">
           <div class="content-2__gabarit">
             <div class="gabarit__ellipse">1</div>
-            <div class="gabarit__icon">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
+            <di class="gabarit__icon">
+              <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+            </di>
             <div class="gabarit__text"><h5>Choisissez un restaurant</h5></div>
           </div>
 
           <div class="content-2__gabarit">
             <div class="gabarit__ellipse">2</div>
             <div class="gabarit__icon">
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fas fa-list-ul" aria-hidden="true"></i>
             </div>
             <div class="gabarit__text"><h5>Composez votre menu</h5></div>
           </div>
           <div class="content-2__gabarit">
             <div class="gabarit__ellipse">3</div>
-            <div class="gabarit__icon gabarit__icon--icon-purple">
-              <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="gabarit__icon">
+              <i
+                class="gabarit__icon--icon-purple fas fa-store"
+                aria-hidden="true"
+              ></i>
             </div>
             <div class="gabarit__text"><h5>Dégustez au restaurant</h5></div>
           </div>
@@ -82,15 +88,15 @@
       <restaurant class="restaurant">
         <div class="restaurant__content-carre">
           <div class="restaurant__content-1"><h1>Restaurant</h1></div>
-          <div class="card-carre"><h6>Nouveau</h6></div>
         </div>
         <div class="restaurant__content-2">
           <div class="card">
             <img
               src="Images/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-              alt="Photo Auberge de La Canebière"
+              alt="Photo plat La palette du goût"
             />
             <div class="title">
+              <div class="card-carre"><p>Nouveau</p></div>
               <h2 class="card-title">La palette du goût</h2>
             </div>
 
@@ -100,8 +106,74 @@
               <i class="star__icon-fas fas fa-heart" aria-hidden="true"></i>
             </div>
           </div>
+          <div class="card">
+            <img
+              src="Images/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+              alt="Photo plat La note enchantée"
+            />
+            <div class="title">
+              <div class="card-carre"><p>Nouveau</p></div>
+              <h2 class="card-title">La note enchantée</h2>
+            </div>
+
+            <div class="card-title__star">
+              <h4 class="star__sous-titre">Charonne</h4>
+              <i class="star__icon-far far fa-heart" aria-hidden="true"></i>
+              <i class="star__icon-fas fas fa-heart" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="Images/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+              alt="Photo plat A la française"
+            />
+            <div class="title">
+              <h2 class="card-title">A la française</h2>
+            </div>
+
+            <div class="card-title__star">
+              <h4 class="star__sous-titre">Cité Rouge</h4>
+              <i class="star__icon-far far fa-heart" aria-hidden="true"></i>
+              <i class="star__icon-fas fas fa-heart" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="Images/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+              alt="Photo plat Le délice des sens"
+            />
+            <div class="title">
+              <h2 class="card-title">Le délice des sens</h2>
+            </div>
+
+            <div class="card-title__star">
+              <h4 class="star__sous-titre">Folie-Méricourt</h4>
+              <i class="star__icon-far far fa-heart" aria-hidden="true"></i>
+              <i class="star__icon-fas fas fa-heart" aria-hidden="true"></i>
+            </div>
+          </div>
         </div>
       </restaurant>
+      <!--Part Footer-->
+      <div class="footer">
+        <div class="logo-footer">ohmyfood</div>
+        <div class="footer__icon-text">
+          <i class="fa-solid fa-utensils"></i>
+          <h5>Proposez un restaurant</h5>
+        </div>
+        <div class="footer__icon-text">
+          <i class="fas fa-hands-helping" aria-hidden="true"></i>
+          <h5>Devenir partenaire</h5>
+        </div>
+        <div class="footer__text">
+          <h5>Mentions légales</h5>
+        </div>
+        <div class="footer__text">
+          <a class="footer__text--link" href="mailto:contact@ohmyfood.fr"
+            ><h5>Contact</h5></a
+          >
+        </div>
+      </div>
     </main>
 
     <footer></footer>

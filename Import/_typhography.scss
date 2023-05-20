@@ -4,6 +4,13 @@ body {
     sans-serif;
 }
 
+.header__logo {
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-size: 30px;
+  @include flex-mid-column;
+  color: #101010;
+}
 h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;

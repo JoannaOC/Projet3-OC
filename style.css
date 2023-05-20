@@ -1,5 +1,6 @@
-@import url(libs/reset.scss);
-@import url(typhograpy.scss);
+@import url(import/libs/reset.scss);
+@import url(Import/_typhography.scss);
+@import url(Import/_mixin.scss);
 body {
   margin: 0 auto;
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -107,6 +108,7 @@ h5 {
   height: 50px;
   text-align: center;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   border-radius: 30px 30px 30px 30px;
@@ -176,36 +178,16 @@ h5 {
 }
 .main .functioning-content .functioning__content-2 .content-2__gabarit .gabarit__icon--icon-purple {
   color: #9356dc;
-  margin-left: 40px;
 }
 .main .restaurant {
   background-color: #f6f6f6;
   width: 100%;
 }
-.main .restaurant__content-carre {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-.main .card-carre {
-  background-color: #99e2d0;
-  color: #008766;
-  width: 80px;
-  height: 29px;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: centegitr;
-  border-radius: 2px;
-}
-.main .restaurant__content-1 {
+.main .restaurant .restaurant__content-1 {
   margin-left: 20px;
   margin-top: 40px;
 }
-.main .restaurant__content-2 {
+.main .restaurant .restaurant__content-2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -213,27 +195,47 @@ h5 {
   background-color: #f6f6f6;
   width: 100%;
   height: auto;
+  margin-bottom: 60px;
 }
-.main .restaurant__content-2 .card {
-  width: 80%;
+.main .restaurant .restaurant__content-2 .card {
+  width: 90%;
   height: auto;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 20px 20px 20px 20px;
   margin-top: 20px;
+  margin-bottom: 15px;
+  position: relative;
 }
-.main .restaurant__content-2 .card img {
+.main .restaurant .restaurant__content-2 .card img {
   width: 100%;
-  height: 100%;
+  height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px 20px 0px 0px;
 }
-.main .restaurant__content-2 .card-title {
+.main .restaurant .restaurant__content-2 .card-carre {
+  background-color: #99e2d0;
+  color: #008766;
+  width: 80px;
+  height: 29px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}
+.main .restaurant .restaurant__content-2 .card-title {
   margin-left: 10px;
   margin-top: 10px;
 }
-.main .restaurant__content-2 .card-title__star {
+.main .restaurant .restaurant__content-2 .card-title__star {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -241,17 +243,17 @@ h5 {
   margin-bottom: 20px;
   position: relative;
 }
-.main .restaurant__content-2 .star__sous-titre {
+.main .restaurant .restaurant__content-2 .star__sous-titre {
   margin-left: 10px;
 }
-.main .restaurant__content-2 .star__icon-far {
+.main .restaurant .restaurant__content-2 .star__icon-far {
   margin-right: 10px;
   font-size: 22px;
   position: absolute;
   right: 10px;
   top: -15px;
 }
-.main .restaurant__content-2 .star__icon-fas {
+.main .restaurant .restaurant__content-2 .star__icon-fas {
   margin-right: 10px;
   font-size: 22px;
   position: absolute;
@@ -261,10 +263,49 @@ h5 {
   transition: all;
   transition-duration: 2s;
 }
-.main .restaurant__content-2 .star__icon-fas:hover {
+.main .restaurant .restaurant__content-2 .star__icon-fas:hover {
   opacity: 1;
   background-image: linear-gradient(rgb(147, 86, 220), rgb(255, 121, 218));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+.main .footer {
+  background-color: #353535;
+  color: #ffffff;
+  margin-top: 0px;
+  padding-left: 40px;
+  margin-top: 0px;
+}
+.main .footer .logo-footer {
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.main .footer .footer__icon-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.main .footer .footer__text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.main .footer .footer__text--link:hover {
+  cursor: pointer;
+}
+.main .footer a.footer__text--link {
+  color: #ffffff;
+  text-decoration: none;
+  padding-bottom: 20px;
 }/*# sourceMappingURL=style.css.map */
