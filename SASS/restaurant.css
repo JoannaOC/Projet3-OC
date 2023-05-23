@@ -188,4 +188,62 @@ h5 {
   justify-content: space-between;
   margin-right: 30px;
   margin-top: 5px;
+}
+.block-2 .block-2__card-plat {
+  padding-left: 20px;
+  padding-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 15px;
+  padding-bottom: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  border-radius: 15.0431px;
+}
+.block-2 .block-2__card-plat .card-plat__PLAT-PRIX {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 30px;
+  margin-top: 5px;
+}
+
+.footer {
+  background-color: #353535;
+  color: #ffffff;
+  margin-top: 0px;
+  padding-left: 40px;
+  padding-top: 20px;
+}
+.footer .logo-footer {
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.footer .footer__icon-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.footer .footer__text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.footer .footer__text--link:hover {
+  cursor: pointer;
+}
+.footer a.footer__text--link {
+  color: #ffffff;
+  text-decoration: none;
+  padding-bottom: 20px;
 }/*# sourceMappingURL=restaurant.css.map */
