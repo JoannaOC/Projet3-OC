@@ -34,3 +34,10 @@
   margin-right: Opx;
   padding-right: 0px;
 }
+.functioning__content-2 {
+  @include flex-mid-column;
+  width: 100%;
+  background-color: #ffffff;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
