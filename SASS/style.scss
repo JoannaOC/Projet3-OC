@@ -148,7 +148,7 @@ h5 {
     }
     .content__btn:hover {
       opacity: 0.5;
-      transition: all 2s ease;
+      transition: all 1s ease;
       transform: scale(1.02);
     }
   }
@@ -322,4 +322,9 @@ h5 {
       padding-bottom: 20px;
     }
   }
+}
+.transform {
+  width: 200px;
+  height: 300px;
+  background-color: #ff79da;
 }
