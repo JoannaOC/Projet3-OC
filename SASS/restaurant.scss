@@ -6,6 +6,11 @@
 $barre-entrees: rgba(153, 226, 208, 1);
 $bouton: rgba(147, 86, 220, 1);
 $color-linear-gradient: (355deg, #9356dc, #ff79da);
+$barre-entrees: rgba(153, 226, 208, 1);
+$bouton: rgba(147, 86, 220, 1);
+$Secondaire: rgba(#ff79da);
+$Tertiaire: rgba(#99e2d0);
+$color-linear-gradient: (355deg, #9356dc, #ff79da);
 
 @mixin flex-mid-column {
   display: flex;
@@ -97,6 +102,18 @@ h5 {
   font-weight: 500;
   font-size: 16px;
   margin: 0px;
+}
+
+@keyframes rideau {
+  0% {
+    background-color: #ff79da;
+  }
+  50% {
+    background-color: rgba(#99e2d0);
+  }
+  100% {
+    background-color: rgba(147, 86, 220, 1);
+  }
 }
 .header {
   box-shadow: 0px 5px 10px 0px #cfcfcf;
@@ -199,12 +216,12 @@ h5 {
   }
 
   .block-2__card-plat {
+    width: 90%;
+    height: 69px;
     padding-left: 20px;
-    padding-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 15px;
-    padding-bottom: 20px;
     background-color: #ffffff;
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
     border-radius: 15.0431px;
@@ -212,6 +229,7 @@ h5 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 
     .card-plat__sous-title {
       display: flex;
@@ -225,6 +243,25 @@ h5 {
       display: flex;
       flex-direction: row;
       justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      .check__price {
+        padding-top: 21px;
+        font-weight: 900;
+      }
+      .check__icon-ok {
+        width: 59px;
+        height: 69px;
+        background-color: #99e2d0;
+        color: white;
+        border-radius: 2px 20px 20px 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+      }
     }
   }
 
@@ -250,12 +287,7 @@ h5 {
       padding: 0px 15px 0px 15px;
       margin: 15px 0px 40px 15px;
       transition: all 1s ease;
-    }
-
-    .block-2__btn:hover {
-      opacity: 0.5;
-      transition: all 1s ease;
-      transform: scale(1.02);
+      cursor: pointer;
     }
   }
 }

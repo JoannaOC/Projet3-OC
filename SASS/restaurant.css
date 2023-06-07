@@ -4,7 +4,8 @@
 @import url(Import/_variables.scss);
 body {
   margin: 0 auto;
-  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 .title {
@@ -63,6 +64,24 @@ h5 {
   margin: 0px;
 }
 
+.circle {
+  width: 500px;
+  height: 500px;
+  background-color: #9356dc;
+  border-radius: 50%;
+}
+
+@keyframes rideau {
+  0% {
+    background-color: #ff79da;
+  }
+  0% {
+    background-color: #ff79da;
+  }
+  0% {
+    background-color: #ff79da;
+  }
+}
 .header {
   box-shadow: 0px 5px 10px 0px #cfcfcf;
   position: relative;
@@ -108,7 +127,7 @@ h5 {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin-bottom: 0px;
   margin: 0 auto;
 }
@@ -172,12 +191,12 @@ h5 {
   border-bottom: solid 3px #99e2d0;
 }
 .block-2 .block-2__card-plat {
+  width: 90%;
+  height: 69px;
   padding-left: 20px;
-  padding-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 15px;
-  padding-bottom: 20px;
   background-color: #ffffff;
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
   border-radius: 15.0431px;
@@ -185,6 +204,7 @@ h5 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 .block-2 .block-2__card-plat .card-plat__sous-title {
   display: flex;
@@ -197,7 +217,24 @@ h5 {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
+.block-2 .block-2__card-plat .card-plat__check-2 .check__price {
+  padding-top: 21px;
+}
+.block-2 .block-2__card-plat .card-plat__check-2 .check__icon-ok {
+  width: 59px;
+  height: 69px;
+  background-color: #99e2d0;
+  color: white;
+  border-radius: 2px 20px 20px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .block-2 .block-2__bouton {
   display: flex;
   flex-direction: row;
@@ -214,16 +251,20 @@ h5 {
   align-items: center;
   border-radius: 30px 30px 30px 30px;
   background: linear-gradient(355deg, #9356dc, #ff79da);
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
   color: #ffffff;
   padding: 0px 15px 0px 15px;
   margin: 15px 0px 40px 15px;
+  transition: all 1s ease;
+  cursor: pointer;
   transition: all 1s ease;
 }
 .block-2 .block-2__bouton .block-2__btn:hover {
   opacity: 0.5;
   transition: all 1s ease;
   transform: scale(1.02);
+  cursor: pointer;
 }
 
 .footer {
@@ -264,4 +305,4 @@ h5 {
   color: #ffffff;
   text-decoration: none;
   padding-bottom: 20px;
-}/*# sourceMappingURL=restaurant.css.map */
+} /*# sourceMappingURL=restaurant.css.map */
