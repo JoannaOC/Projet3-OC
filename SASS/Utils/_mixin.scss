@@ -34,10 +34,32 @@
   margin-right: Opx;
   padding-right: 0px;
 }
-.functioning__content-2 {
-  @include flex-mid-column;
+
+@mixin flex-mid-column {
   width: 100%;
   background-color: #ffffff;
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
+
+.content__btn {
+      width: 218px;
+      height: 50px;
+      text-align: center;
+      @include flex-mid-row;
+      border-radius: 30px 30px 30px 30px;
+      background: linear-gradient(355deg, #9356dc, #ff79da);
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+        rgba(212, 172, 172, 0.05) 0px 5px 10px;
+      color: #ffffff;
+      padding: 0px 15px 0px 15px;
+      margin: 15px 0px 40px 15px;
+      transition: all 2s ease;
+    }
+    .content__btn:hover {
+      opacity: 0.5;
+      transition: all 1s ease;
+      transform: scale(1.02);
+    }
+
+
