@@ -1,6 +1,32 @@
-@import url(import/libs/reset.scss);
-@import url(Import/_typhography.scss);
-@import url(Import/_mixin.scss);
+.loading {
+  width: 50px;
+  height: 50px;
+  border-top: 5px solid #9356dc;
+  border-bottom: 5px solid #ff79da;
+  border-radius: 50px;
+  border-left: #008766;
+  border-right: #99e2d0;
+  margin: auto;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 9999;
+  animation: mon-loading-spiner 5s linear infinite;
+}
+
+@keyframes mon-loading-spiner {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    display: none;
+  }
+}
 body {
   margin: 0 auto;
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
