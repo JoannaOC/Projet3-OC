@@ -378,4 +378,23 @@ h5 {
   width: 200px;
   height: 300px;
   background-color: #ff79da;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .main .functioning-content .functioning__content-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    gap: 25px;
+    margin-left: 222px;
+  }
+  .main .functioning-content .functioning__content-1 {
+    margin-left: 222px;
+  }
 }/*# sourceMappingURL=style.css.map */

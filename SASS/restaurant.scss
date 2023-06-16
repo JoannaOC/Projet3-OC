@@ -67,7 +67,6 @@ body {
   font-size: 16px;
   margin: 0px;
 }
-
 h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -98,7 +97,6 @@ h5 {
   font-size: 16px;
   margin: 0px;
 }
-
 .header {
   box-shadow: 0px 5px 10px 0px #cfcfcf;
   position: relative;
@@ -110,6 +108,7 @@ h5 {
     font-size: 30px;
     @include flex-mid-column;
     color: #101010;
+    margin-left: 40px;
   }
 }
 .header {
@@ -124,14 +123,9 @@ h5 {
     padding-left: 20px;
   }
   .header__logo {
-    font-family: Shrikhand;
-    font-weight: 400;
-    font-size: 30px;
-    @include flex-mid-column;
-    color: #101010;
+    margin-left: 250px;
   }
 }
-
 .img-restaurant {
   width: 100%;
   height: auto;
@@ -139,7 +133,6 @@ h5 {
   margin-bottom: 0px;
   margin: 0 auto;
 }
-
 .block-2 {
   margin: 0 auto;
   background-color: #f7f7f7;
@@ -156,14 +149,13 @@ h5 {
     padding-left: 20px;
     padding-top: 30px;
 
-    .restaurant__NOM {
+    .restaurant__nom {
       margin-top: 30px;
       font-family: Shrikhand;
       font-weight: 400;
       font-size: 20px;
     }
-
-    .restaurant__ICON {
+    .restaurant__icon {
       @include flex-mid-start;
       margin: 0 auto;
       position: relative;
@@ -181,7 +173,6 @@ h5 {
         opacity: 1;
         color: transparent;
         background-clip: text;
-        -webkit-background-clip: text;
         color: transparent;
         background-image: linear-gradient(355deg, #9356dc, #ff79da);
       }
@@ -189,11 +180,12 @@ h5 {
   }
   .block-2__entrees {
     margin-left: 20px;
-    .entrees__NOM-ENTREES {
+
+    .entrees__nom-entrees {
       width: 40px;
       display: flex;
       flex-direction: column;
-      margin-top: 10px;
+      margin-top: 32px;
       border: #99e2d0 transparent;
       border-bottom: solid 3px #99e2d0;
     }
@@ -277,7 +269,7 @@ h5 {
         rgba(0, 0, 0, 0.05) 0px 5px 10px;
       color: #ffffff;
       padding: 0px 15px 0px 15px;
-      margin: 15px 0px 40px 15px;
+      margin: 32px 0px 40px 15px;
       transition: all 1s ease;
       cursor: pointer;
     }
@@ -292,21 +284,25 @@ h5 {
 .footer {
   background-color: #353535;
   color: #ffffff;
-  margin-top: 0px;
+  margin-top: -58px;
   padding-left: 40px;
   padding-top: 20px;
-  .logo-footer {
+  padding-bottom: 1px;
+
+  .footer__logo-footer {
     font-family: Shrikhand;
     font-weight: 400;
     font-size: 18px;
     margin-top: 20px;
     margin-bottom: 20px;
+    visibility: visible;
   }
   .footer__icon-text {
     @include flex-mid-start;
     gap: 10px;
     margin-bottom: 10px;
   }
+
   .footer__text {
     @include flex-mid-start;
     gap: 10px;
@@ -320,5 +316,91 @@ h5 {
     color: #ffffff;
     text-decoration: none;
     padding-bottom: 20px;
+  }
+  .footer__logo-footer-end {
+    font-family: Shrikhand;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    .header__logo {
+      margin-left: 247px;
+    }
+
+    .img-restaurant {
+      height: 600px;
+      margin: 0 auto;
+    }
+    .block-2 {
+      width: 75%;
+
+      .block-2__card-plat {
+        width: 60%;
+        margin: auto;
+        margin-bottom: 20px;
+      }
+      .block-2__entrees {
+        margin-left: 210px;
+        margin-bottom: 15px;
+      }
+      .block-2__restaurant {
+        padding-left: 335px;
+        gap: 0%;
+      }
+      .block-2__restaurant .restaurant__icon {
+        margin-right: 432px;
+        padding-top: 20px;
+        font-size: 22px;
+      }
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 10px;
+
+      .footer__icon-text {
+        margin-right: 50px;
+      }
+
+      .footer__text {
+        display: flex;
+        align-items: center;
+
+        .footer__text--link {
+          margin-top: 20px;
+        }
+      }
+
+      .footer__logo-footer {
+        font-family: Shrikhand;
+        font-weight: 400;
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: none;
+      }
+      .footer__logo-footer-end {
+        font-family: Shrikhand;
+        font-weight: 400;
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: inline;
+        margin-bottom: 30px;
+      }
+    }
   }
 }
