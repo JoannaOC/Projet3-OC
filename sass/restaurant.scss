@@ -67,6 +67,7 @@ body {
   font-size: 16px;
   margin: 0px;
 }
+
 h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -287,7 +288,7 @@ h5 {
   margin-top: -58px;
   padding-left: 40px;
   padding-top: 20px;
-  padding-bottom: 1px;
+  padding-bottom: 10px;
 
   .footer__logo-footer {
     font-family: Shrikhand;
@@ -297,22 +298,27 @@ h5 {
     margin-bottom: 20px;
     visibility: visible;
   }
-  .footer__icon-text {
+  .footer__icon-text-1 {
+    @include flex-mid-start;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .footer__icon-text-2 {
     @include flex-mid-start;
     gap: 10px;
     margin-bottom: 10px;
   }
 
-  .footer__text {
+  .footer__text-1 {
     @include flex-mid-start;
     gap: 10px;
     margin-bottom: 10px;
     text-decoration: none;
   }
-  .footer__text--link:hover {
+  .footer__text-2--link:hover {
     cursor: pointer;
   }
-  a.footer__text--link {
+  a.footer__text-2--link {
     color: #ffffff;
     text-decoration: none;
     padding-bottom: 20px;
@@ -368,21 +374,9 @@ h5 {
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      gap: 20px;
+      padding-left: 22%;
       width: 100%;
-      gap: 10px;
-
-      .footer__icon-text {
-        margin-right: 50px;
-      }
-
-      .footer__text {
-        display: flex;
-        align-items: center;
-
-        .footer__text--link {
-          margin-top: 20px;
-        }
-      }
 
       .footer__logo-footer {
         font-family: Shrikhand;
@@ -397,9 +391,24 @@ h5 {
         font-weight: 400;
         font-size: 18px;
         margin-top: 20px;
-        margin-bottom: 20px;
         display: inline;
         margin-bottom: 30px;
+        margin-left: 200px;
+        margin-right: 0px;
+        padding-right: 0px;
+      }
+      .footer__icon-text-1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .footer__text-1 {
+        margin-left: 20px;
+      }
+      .footer__text-2 {
+        padding-bottom: 10px;
       }
     }
   }
