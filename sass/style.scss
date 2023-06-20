@@ -1,5 +1,29 @@
-$fond-blanc: rgba(255, 255, 255, 1);
-$ellipse-violet: rgba(147, 86, 220, 1);
+// Couleurs principales du site
+
+$Primaire: rgba(147, 86, 220, 1);
+$Secondaire: rgba(#ff79da);
+$Tertiaire: rgba(#99e2d0);
+$color-linear-gradient: (355deg, #9356dc, #ff79da);
+
+// Couleurs noirs
+
+$text-Shrikhand: rgba(16, 16, 16, 1);
+$text-Roboto: rgba(0, 0, 0, 1);
+
+// Couleurs gris
+
+$text-grey-1: rgba(53, 53, 53, 1);
+$text-grey-icon: rgba(126, 126, 126, 1);
+
+// Couleur texte blanc
+
+$white-text: rgba(255, 255, 255, 1);
+
+// Les couleurs de fond
+
+$white-background: rgba(255, 255, 255, 1);
+$grey-background: rgba(234, 234, 234, 1);
+$grey-light-background: rgba(246, 246, 246, 1);
 
 @mixin flex-mid-column {
   display: flex;
@@ -24,6 +48,12 @@ $ellipse-violet: rgba(147, 86, 220, 1);
   flex-direction: column;
   justify-content: flex-start;
 }
+@mixin flex-row-space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 @mixin div-chiffres {
   font-family: roboto;
   font-size: 14.18px;
@@ -37,14 +67,10 @@ $ellipse-violet: rgba(147, 86, 220, 1);
   margin-right: Opx;
   padding-right: 0px;
 }
-
 .loading {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  @include flex-mid-row;
   height: 100vh;
-  background-color: #ffffff;
+  background-color: $white-background;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -58,8 +84,8 @@ $ellipse-violet: rgba(147, 86, 220, 1);
   animation-fill-mode: forwards;
 
   .loading-in {
-    border-top: 5px solid #9356dc;
-    border-bottom: 5px solid #ff79da;
+    border-top: 5px solid $Primaire;
+    border-bottom: 5px solid $Secondaire;
     border-radius: 50px;
     width: 100px;
     height: 100px;
@@ -73,7 +99,6 @@ $ellipse-violet: rgba(147, 86, 220, 1);
     animation: loading-in 5s infinite;
   }
 }
-
 @keyframes mon-loading-spiner {
   0% {
     opacity: 2;
@@ -86,7 +111,6 @@ $ellipse-violet: rgba(147, 86, 220, 1);
     z-index: -1;
   }
 }
-
 @keyframes loading-in {
   0% {
     transform: rotate(0deg);
@@ -98,7 +122,6 @@ $ellipse-violet: rgba(147, 86, 220, 1);
     opacity: 0;
   }
 }
-
 body {
   margin: 0 auto;
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
@@ -107,7 +130,6 @@ body {
 a:link {
   text-decoration: none;
 }
-
 h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -122,7 +144,7 @@ h2 {
 }
 h3 {
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 18px;
   margin: 0px;
 }
@@ -144,11 +166,12 @@ h5 {
   z-index: 2;
 
   .header__logo {
+    @include flex-mid-row;
     font-family: Shrikhand;
     font-weight: 400;
     font-size: 30px;
-    text-align: center;
-    color: #101010;
+    color: $text-Shrikhand;
+    height: auto;
   }
 }
 .main {
@@ -162,15 +185,14 @@ h5 {
     gap: 2%;
     background-color: #eaeaea;
     z-index: 1;
-    color: #353535;
+    color: $text-grey-1;
     .location__icon {
-      color: #353535;
+      color: $text-grey-1;
     }
   }
-
   .explanation {
     @include flex-mid-column;
-    background-color: #f6f6f6;
+    background-color: $grey-light-background;
     width: 100%;
     margin: 0px;
 
@@ -182,11 +204,11 @@ h5 {
       width: 90%;
       margin-top: 30px;
       font-size: 24px;
-      color: #000000;
+      color: $text-Roboto;
     }
     .content-explanation__text {
       margin-top: 0px;
-      color: #353535;
+      color: $text-grey-1;
       margin: 10px;
       width: 100%;
     }
@@ -196,10 +218,10 @@ h5 {
       text-align: center;
       @include flex-mid-row;
       border-radius: 30px 30px 30px 30px;
-      background: linear-gradient(355deg, #9356dc, #ff79da);
+      background: $color-linear-gradient;
       box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
-        rgba(212, 172, 172, 0.05) 0px 5px 10px;
-      color: #ffffff;
+        rgba(212, 172, 172, 172) 0px 5px 10px;
+      color: $white-text;
       padding: 0px 15px 0px 15px;
       margin: 15px 0px 40px 15px;
       transition: all 2s ease;
@@ -212,19 +234,17 @@ h5 {
   }
   .functioning-content {
     width: 100%;
-    background-color: #ffffff;
+    background-color: $white-background;
     margin-bottom: 40px;
 
     .functioning__content-1 {
-      margin-top: 35px;
-      margin-left: 20px;
-      margin-bottom: 40px;
+      margin: 35px 0px 40px 20px;
       padding-left: 0px;
     }
     .functioning__content-2 {
       @include flex-mid-column;
       width: 100%;
-      background-color: #ffffff;
+      background-color: $grey-light-background;
       margin-bottom: 0px;
       padding-bottom: 0px;
 
@@ -234,8 +254,8 @@ h5 {
         width: 90%;
         height: 70px;
         border-radius: 20px 20px 20px 20px;
-        background-color: #f6f6f6;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background-color: $grey-light-background;
+        box-shadow: rgba(0, 0, 0, 0) 0px 3px 8px;
         position: relative;
         margin-bottom: 25px;
 
@@ -246,23 +266,22 @@ h5 {
           left: -12px;
         }
         .gabarit__icon {
-          color: #7e7e7e;
+          color: $text-grey-icon;
           margin-left: 40px;
         }
 
         .gabarit__icon--icon-purple {
-          color: #9356dc;
+          color: $Primaire;
         }
       }
     }
   }
   .restaurant {
-    background-color: #f6f6f6;
+    background-color: $grey-light-background;
     width: 100%;
 
     .restaurant__content-1 {
-      margin-left: 20px;
-      margin-top: 40px;
+      margin: 40px 0px 0px 20px;
     }
     .restaurant__content-2 {
       @include flex-mid-column;
@@ -274,15 +293,15 @@ h5 {
       .card {
         width: 90%;
         height: auto;
-        background-color: white;
+        background-color: $white-background;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         border-radius: 20px 20px 20px 20px;
-        margin-top: 20px;
-        margin-bottom: 15px;
+        margin: 20px 0px 15px 0px;
+
         position: relative;
       }
       a {
-        color: #000000;
+        color: $text-Roboto;
       }
       .card img {
         width: 100%;
@@ -291,8 +310,8 @@ h5 {
         border-radius: 20px 20px 0px 0px;
       }
       .card-carre {
-        background-color: #99e2d0;
-        color: #008766;
+        background-color: $green-light;
+        color: $green-dark;
         width: 80px;
         height: 29px;
         text-align: center;
@@ -305,14 +324,10 @@ h5 {
         right: 15px;
       }
       .card-title {
-        margin-left: 10px;
-        margin-top: 10px;
+        margin: 10px 0px 0px 10px;
       }
       .card-title__star {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        @include flex-row-space-between;
         margin-bottom: 20px;
         position: relative;
       }
@@ -338,10 +353,7 @@ h5 {
       }
       .star__icon-fas:hover {
         opacity: 1;
-        background-image: linear-gradient(
-          rgba(147, 86, 220, 1),
-          rgba(255, 121, 218, 1)
-        );
+        background-image: $color-linear-gradient;
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -349,42 +361,55 @@ h5 {
     }
   }
   .footer {
-    background-color: #353535;
-    color: #ffffff;
-    margin-top: 0px;
-    padding-left: 40px;
-    margin-top: 0px;
-    .logo-footer {
+    background-color: $text-grey-1;
+    color: $white-text;
+    padding: 20px 0px 10px 40px;
+    margin-top: -58px;
+
+    .footer__logo-footer {
       font-family: Shrikhand;
       font-weight: 400;
       font-size: 18px;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin: 10px 0px 20px 0px;
+      visibility: visible;
     }
-    .footer__icon-text {
+    .footer__icon-text-1 {
       @include flex-mid-start;
       gap: 10px;
       margin-bottom: 10px;
     }
-    .footer__text {
+    .footer__icon-text-2 {
       @include flex-mid-start;
       gap: 10px;
       margin-bottom: 10px;
     }
-    .footer__text--link:hover {
+    .footer__text-1 {
+      @include flex-mid-start;
+      gap: 10px;
+      margin-bottom: 15px;
+      text-decoration: none;
+    }
+    .footer__text-2--link:hover {
       cursor: pointer;
     }
-    a.footer__text--link {
-      color: #ffffff;
+    a.footer__text-2--link {
+      color: $white-text;
       text-decoration: none;
       padding-bottom: 20px;
+    }
+    .footer__logo-footer-end {
+      font-family: Shrikhand;
+      font-weight: 400;
+      font-size: 18px;
+      margin: 20px 0px 20px 0px;
+      display: none;
     }
   }
 }
 .transform {
   width: 200px;
   height: 300px;
-  background-color: #ff79da;
+  background-color: $Secondaire;
 }
 
 @media screen and (min-width: 1440px) {
@@ -392,17 +417,47 @@ h5 {
     max-width: 1440px;
     margin: 0 auto;
   }
-
   .main .functioning-content .functioning__content-2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    @include flex-mid-row;
     width: 70%;
     gap: 25px;
     margin-left: 222px;
   }
   .main .functioning-content .functioning__content-1 {
     margin-left: 222px;
+  }
+  .main .restaurant .restaurant__content-1 {
+    margin-left: 222px;
+  }
+  .main .restaurant .restaurant__content-2 {
+    @include flex-mid-row;
+    background-color: #f6f6f6;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .main .restaurant .restaurant__content-2 .card {
+    width: 35%;
+    height: auto;
+  }
+  .main .footer {
+    @include flex-mid-row;
+    gap: 20px;
+  }
+  .main .footer .footer__text-1 {
+    margin-left: 25px;
+  }
+  .main .footer .footer__logo-footer {
+    display: none;
+  }
+  .main .footer .footer__logo-footer-end {
+    display: block;
+    margin-left: 50px;
+    padding-bottom: 10px;
+  }
+  .main .footer .footer__text-2 {
+    padding-bottom: 10px;
+  }
+  .main .footer .footer__icon-text-1 {
+    margin-left: 450px;
   }
 }

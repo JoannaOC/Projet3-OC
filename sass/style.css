@@ -338,40 +338,59 @@ h5 {
 .main .footer {
   background-color: #353535;
   color: #ffffff;
-  margin-top: 0px;
+  margin-top: -58px;
   padding-left: 40px;
-  margin-top: 0px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
-.main .footer .logo-footer {
+.main .footer .footer__logo-footer {
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  visibility: visible;
+}
+.main .footer .footer__icon-text-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.main .footer .footer__icon-text-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.main .footer .footer__text-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
+.main .footer .footer__text-2--link:hover {
+  cursor: pointer;
+}
+.main .footer a.footer__text-2--link {
+  color: #ffffff;
+  text-decoration: none;
+  padding-bottom: 20px;
+}
+.main .footer .footer__logo-footer-end {
   font-family: Shrikhand;
   font-weight: 400;
   font-size: 18px;
   margin-top: 20px;
   margin-bottom: 20px;
-}
-.main .footer .footer__icon-text {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-.main .footer .footer__text {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-.main .footer .footer__text--link:hover {
-  cursor: pointer;
-}
-.main .footer a.footer__text--link {
-  color: #ffffff;
-  text-decoration: none;
-  padding-bottom: 20px;
+  display: none;
 }
 
 .transform {
@@ -396,5 +415,51 @@ h5 {
   }
   .main .functioning-content .functioning__content-1 {
     margin-left: 222px;
+  }
+  .main .restaurant .restaurant__content-1 {
+    margin-left: 222px;
+  }
+  .main .restaurant .restaurant__content-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f6f6;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .main .restaurant .restaurant__content-2 .card {
+    width: 35%;
+    height: auto;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px 20px 20px 20px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  .main .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .main .footer .footer__text-1 {
+    margin-left: 25px;
+  }
+  .main .footer .footer__logo-footer {
+    display: none;
+  }
+  .main .footer .footer__logo-footer-end {
+    display: block;
+    margin-left: 50px;
+    padding-bottom: 10px;
+  }
+  .main .footer .footer__text-2 {
+    padding-bottom: 10px;
+  }
+  .main .footer .footer__icon-text-1 {
+    margin-left: 450px;
   }
 }/*# sourceMappingURL=style.css.map */
