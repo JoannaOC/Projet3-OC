@@ -1,31 +1,6 @@
-@import url(import/libs/reset.scss);
-@import url(Import/_typhography.scss);
-@import url(Import/_mixin.scss);
-@import url(Import/_variables.scss);
 body {
   margin: 0 auto;
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-.title {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0px;
-}
-
-.sous-title {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 15.04px;
-  margin: 0px;
-}
-
-.before-title {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  margin: 0px;
 }
 
 h1 {
@@ -67,35 +42,25 @@ h5 {
   box-shadow: 0px 5px 10px 0px #cfcfcf;
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25%;
+}
+.header .header__icon {
+  color: rgb(53, 53, 53);
+  padding-left: 20px;
 }
 .header .header__logo {
   font-family: Shrikhand;
   font-weight: 400;
   font-size: 30px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: #101010;
-  margin-left: 40px;
-}
-
-.header {
-  box-shadow: 0px 5px 10px 0px #cfcfcf;
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20%;
-}
-.header .header__icon {
-  color: #353535;
-  padding-left: 20px;
-}
-.header .header__logo {
-  margin-left: 250px;
+  color: rgb(16, 16, 16);
 }
 
 .img-restaurant {
@@ -109,7 +74,7 @@ h5 {
 
 .block-2 {
   margin: 0 auto;
-  background-color: #f7f7f7;
+  background-color: rgb(246, 246, 246);
   border-radius: 40px 40px 0px 0px;
   position: relative;
   top: -60px;
@@ -117,17 +82,16 @@ h5 {
 .block-2 .block-2__restaurant {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 10%;
-  padding-left: 20px;
   padding-top: 30px;
 }
 .block-2 .block-2__restaurant .restaurant__nom {
   margin-top: 30px;
   font-family: Shrikhand;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 28px;
+  padding-left: 20px;
 }
 .block-2 .block-2__restaurant .restaurant__icon {
   display: flex;
@@ -138,6 +102,7 @@ h5 {
   position: relative;
   margin-right: 30px;
   margin-top: 10px;
+  font-size: 28px;
 }
 .block-2 .block-2__restaurant .restaurant__icon .star__icon-fas {
   position: absolute;
@@ -159,20 +124,22 @@ h5 {
 }
 .block-2 .block-2__entrees .entrees__nom-entrees {
   width: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  margin: 0px;
   display: flex;
   flex-direction: column;
   margin-top: 32px;
-  border: #99e2d0 transparent;
+  border: rgb(153, 226, 208) transparent;
   border-bottom: solid 3px #99e2d0;
 }
 .block-2 .block-2__card-plat {
   width: 90%;
   height: 69px;
   padding-left: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 15px;
-  background-color: #ffffff;
+  margin: 15px 20px 0px 20px;
+  background-color: rgb(255, 255, 255);
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
   border-radius: 15.0431px;
   display: flex;
@@ -181,16 +148,26 @@ h5 {
   align-items: center;
   overflow: hidden;
 }
-.block-2 .block-2__card-plat:hover .check__icon-ok {
-  margin-right: 0;
-  transition: all 2s ease;
+.block-2 .block-2__card-plat .card-plat__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0px;
 }
-.block-2 .card-plat__sous-title {
+.block-2 .block-2__card-plat .card-plat__sous-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 15.04px;
+  margin: 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-right: 30px;
-  margin-top: 5px;
+  align-items: center;
+  margin: 5px 30px 0px 0px;
+}
+.block-2 .block-2__card-plat:hover .check__icon-ok {
+  margin-right: 0;
+  transition: all 2s ease;
 }
 .block-2 .card-plat__check-2 {
   display: flex;
@@ -208,8 +185,8 @@ h5 {
 .block-2 .card-plat__check-2 .check__icon-ok {
   width: 59px;
   height: 69px;
-  background-color: #99e2d0;
-  color: white;
+  background-color: rgb(153, 226, 208);
+  color: rgb(255, 255, 255);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -226,15 +203,14 @@ h5 {
 .block-2 .block-2__bouton .block-2__btn {
   width: 218px;
   height: 50px;
-  text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   border-radius: 30px 30px 30px 30px;
   background: linear-gradient(355deg, #9356dc, #ff79da);
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
-  color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0) 0px 5px 10px;
+  color: rgb(255, 255, 255);
   padding: 0px 15px 0px 15px;
   margin: 32px 0px 40px 15px;
   transition: all 1s ease;
@@ -247,19 +223,16 @@ h5 {
 }
 
 .footer {
-  background-color: #353535;
-  color: #ffffff;
+  background-color: rgb(53, 53, 53);
+  color: rgb(255, 255, 255);
   margin-top: -58px;
-  padding-left: 40px;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding: 20px 0px 10px 40px;
 }
 .footer .footer__logo-footer {
   font-family: Shrikhand;
   font-weight: 400;
   font-size: 18px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0px 20px 0px;
   visibility: visible;
 }
 .footer .footer__icon-text-1 {
@@ -291,7 +264,7 @@ h5 {
   cursor: pointer;
 }
 .footer a.footer__text-2--link {
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   padding-bottom: 20px;
 }
@@ -299,8 +272,7 @@ h5 {
   font-family: Shrikhand;
   font-weight: 400;
   font-size: 18px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0px 20px 0px;
   display: none;
 }
 
@@ -319,23 +291,28 @@ h5 {
   body .block-2 {
     width: 75%;
   }
+  body .block-2 .block-2__restaurant {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    padding-left: 30%;
+  }
+  body .block-2 .block-2__restaurant .restaurant__icon {
+    padding-top: 35px;
+    margin-right: 350px;
+    margin-top: -5px;
+  }
   body .block-2 .block-2__card-plat {
     width: 60%;
-    margin: auto;
+    margin: 0 auto;
     margin-bottom: 20px;
   }
   body .block-2 .block-2__entrees {
     margin-left: 210px;
     margin-bottom: 15px;
-  }
-  body .block-2 .block-2__restaurant {
-    padding-left: 335px;
-    gap: 0%;
-  }
-  body .block-2 .block-2__restaurant .restaurant__icon {
-    margin-right: 432px;
-    padding-top: 20px;
-    font-size: 22px;
   }
   body .footer {
     display: flex;

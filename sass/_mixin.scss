@@ -1,4 +1,4 @@
-// Mixin liées à Flexbox
+// Mixins liées à Flexbox
 
 @mixin flex-mid-column {
   display: flex;
@@ -22,6 +22,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
 }
 @mixin flex-row-space-between {
   display: flex;
@@ -29,17 +30,44 @@
   justify-content: space-between;
   align-items: center;
 }
+@mixin flex-row-space-around {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
 
+// Mixin des cercles numérotés
 @mixin div-chiffres {
   font-family: roboto;
   font-size: 14.18px;
   font-weight: 500;
   line-height: 16.62px;
   color: #f6f6f6;
-  background-color: #9356dc;
+  background-color: $Primaire;
   border-radius: 50%;
   width: 26px;
   height: 24px;
   margin-right: Opx;
   padding-right: 0px;
+}
+// Mixin des typographies des pages restaurants
+
+@mixin before-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  margin: 0px;
+}
+@mixin title {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0px;
+}
+@mixin sous-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 15.04px;
+  margin: 0px;
 }
