@@ -27,3 +27,4 @@ permettre la réservation en ligne et la composition de menus.
 - Mise en place d'une partie de l'architecture 7:1 avec le @import sur les variables et les mixins.
 - Visualisaiton du site Web sur GitHub Pages.
 
+A ce stade du projet, les fonctionnalités ne sont pas toutes actives.
