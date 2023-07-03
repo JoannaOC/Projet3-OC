@@ -145,11 +145,17 @@ h5 {
   align-items: center;
   overflow: hidden;
 }
+.block-2 .block-2__card-plat .card-plat__check-1 {
+  white-space: nowrap;
+  overflow: hidden;
+}
 .block-2 .block-2__card-plat .card-plat__title {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 500;
   margin: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .block-2 .block-2__card-plat .card-plat__sous-title {
   font-family: "Roboto", sans-serif;
@@ -161,6 +167,8 @@ h5 {
   justify-content: space-between;
   align-items: center;
   margin: 5px 30px 0px 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .block-2 .block-2__card-plat:hover .check__icon-ok {
   margin-right: 0;

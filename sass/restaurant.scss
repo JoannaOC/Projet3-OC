@@ -129,14 +129,23 @@ h5 {
     @include flex-row-space-between;
     overflow: hidden;
 
+    .card-plat__check-1 {
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
     .card-plat__title {
       @include title;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .card-plat__sous-title {
       @include sous-title;
       @include flex-row-space-between;
       margin: 5px 30px 0px 0px;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 
