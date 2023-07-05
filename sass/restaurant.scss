@@ -68,7 +68,9 @@ h5 {
   border-radius: 40px 40px 0px 0px;
   position: relative;
   top: -60px;
-  @include flex-mid-column;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 
   .block-2__restaurant {
     @include flex-mid-row;
@@ -79,14 +81,14 @@ h5 {
       font-family: Shrikhand;
       font-weight: 400;
       font-size: 28px;
-      padding-left: 20px;
+      padding-left: 5%;
     }
     .restaurant__icon {
       @include flex-mid-start;
       margin: 0 auto;
       position: relative;
-      margin-right: 30px;
-      margin-top: 10px;
+      margin-right: 5%;
+      margin-top: 25px;
       font-size: 28px;
 
       .star__icon-fas {
@@ -130,6 +132,27 @@ h5 {
     @include flex-row-space-between;
     overflow: hidden;
 
+    @keyframes translatePlat {
+      0% {
+        transform: translateY(25px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 100%;
+      }
+    }
+
+    &.block-2__card-plat--entrees {
+      animation: 2s translatePlat;
+    }
+    &.block-2__card-plat--plats {
+      animation: 4s translatePlat;
+    }
+    &.block-2__card-plat--desserts {
+      animation: 6s translatePlat;
+    }
+
     .card-plat__check-1 {
       white-space: nowrap;
       overflow: hidden;
@@ -143,7 +166,8 @@ h5 {
 
     .card-plat__sous-title {
       @include sous-title;
-      @include flex-row-space-between;
+      // @include flex-row-space-between;
+      display: block;
       margin: 5px 30px 0px 0px;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -261,7 +285,6 @@ h5 {
     }
     .img-restaurant {
       height: 600px;
-      margin: 0 auto;
     }
 
     .block-2 {
@@ -276,7 +299,7 @@ h5 {
 
       .block-2__restaurant .restaurant__icon {
         padding-top: 35px;
-        margin-right: 350px;
+        margin-right: 50%;
         margin-top: -5px;
       }
 
